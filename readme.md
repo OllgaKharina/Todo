@@ -53,6 +53,6 @@ npm test
 - **Jest + React Testing Library** (тестирование)
 
 ## 📌 Скриншот
-![Todo App](screenshot.png)
+![Todo App](ScreenShot.png)
 
 
