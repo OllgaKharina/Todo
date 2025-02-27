@@ -1,0 +1,156 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #333;
+	background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+  
+	/* Улучшенные параметры рендеринга текста */
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+  }
+     
+  /* Основной контейнер списка задач */
+  .main-container {
+	width: 500px;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+  }
+  
+  /* Заголовок */
+  h2 {
+	margin: 0;
+	font-size: 60px;
+	color: rgba(175, 47, 47, 0.15);
+	font-weight: 100;
+	text-transform: lowercase;
+  }
+  
+  /* Строка ввода */
+  .todo-input {
+	width: 100%;
+	padding: 15px;
+	font-size: 18px;
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.6);
+	border: none;
+	border-bottom: 1px solid #eee;
+	outline: none;
+	background: transparent;
+  }
+  
+  .todo-input::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Элементы списка задач */
+  .todo-item {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	font-size: 18px;
+	border-bottom: 1px solid #eee;
+	transition: all 0.3s;
+  }
+  
+  /* Чекбоксы */
+  .todo-checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	appearance: none;
+	border: 2px solid #ccc;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .todo-checkbox:checked {
+	border-color: #6dc4a4;
+	background-color: transparent;
+  }
+  
+  .todo-checkbox:checked::after {
+	content: "✔";
+	color: #6dc4a4;
+	font-size: 14px;
+	font-weight: bold;
+  }
+  
+  /* Зачеркнутый текст у выполненных задач */
+  .completed {
+	text-decoration: line-through;
+	color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Футер с фильтрами */
+  .footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Фильтры */
+  .filters {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .filter-button {
+	background: none;
+	border: 1px solid transparent;
+	padding: 5px 10px;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+  }
+  
+  .filter-button:hover {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+  }
+  
+  .filter-button.active {
+	border: 1px solid rgba(175, 47, 47, 0.3);
+	color: rgba(175, 47, 47, 0.8);
+	border-radius: 3px;
+  }
+  
+  /* Кнопка очистки завершенных задач */
+  .clear-button {
+	background: none;
+	border: none;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+  }
+  
+  .clear-button:hover {
+	color: rgba(175, 47, 47, 0.8);
+  }
+  
